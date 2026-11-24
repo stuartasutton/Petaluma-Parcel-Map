@@ -11,6 +11,6 @@ Download the current HTML file and open it directly in a current Chrome or Safar
 ## November 24 refinements
 
 - Residential parcels and the matching legend swatch use pale green (`#addbaf`).
-- Parcel outlines use dark grey (`#4a4a4a`) at 85% opacity and a 0.7 px width in the standard view. Selection highlighting and vacancy context styling are preserved.
+- Parcel outlines use dark grey (`#4a4a4a`) at 85% opacity with a width that increases from 0.25 px at citywide zoom to 0.7 px for neighborhood and parcel views. Selection highlighting and vacancy context styling are preserved.
 - Clicking a parcel updates the details and highlight at the current map center and zoom. APN search retains its existing zoom-to-result behavior.
 - The November 2 build contains no APN or named-place labels on the map, so the requested label darkening could not be applied. APNs are still available in search and parcel details.
