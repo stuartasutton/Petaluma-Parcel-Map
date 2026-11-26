@@ -6,7 +6,22 @@ Explore existing land use in Petaluma using locally interpreted Sonoma County As
 - [Previous working version](Asessor-parcel-map-2026-11-02.html) · November 2, 2026
 - [Historical reference implementation](reference/petaluma_parcels_map.html)
 
-Download the current HTML file and open it directly in a current Chrome or Safari browser. The embedded parcel map needs no local server. The optional County street basemap needs an internet connection.
+## Opening and Closing the Map on macOS
+
+1. Install [Python 3](https://www.python.org/downloads/macos/) and Google Chrome. No Python packages are required.
+2. Open the repository folder in Finder and double-click `start-map.command`. The launcher waits for the server, then opens the current map in Chrome. You can close the Terminal window after Chrome opens. Double-clicking again reuses the running server.
+3. Double-click `stop-map.command` in the same folder to stop the Parcel Map server.
+
+The local map URL is **http://127.0.0.1:8001/Assessor-parcel-map-2026-11-24.html**. The Parcel Map listens on port **8001** on your Mac. The Value Map can run at the same time on port **8000**. The optional County street basemap requires an internet connection.
+
+To create a desktop shortcut, select `start-map.command` in Finder, choose **File → Make Alias**, and drag the alias to your Desktop. Keep the original in the repository folder.
+
+### Troubleshooting
+
+- **Finder says the file cannot be executed.** Open Terminal in the repository folder and run `chmod +x start-map.command stop-map.command`. If macOS asks you to confirm opening the script, use Control-click → **Open**.
+- **Port 8001 is already in use.** Close the app using that port and run the launcher again.
+- **Server did not respond.** In Finder press **Command–Shift–.** to show hidden files and open `.map-server.log` in the repository folder. If a start or stop was interrupted and the launcher reports a lock error, remove the empty `.map-server.lock` folder after both scripts have exited.
+- **Chrome did not open.** Install Chrome or paste the local URL into your browser while the server is running. The HTML file can also be opened directly in Chrome or Safari.
 
 ## APN search
 
